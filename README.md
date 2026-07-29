@@ -104,7 +104,7 @@ The model achieved its best overall performance using **300 decision trees**, pr
 The scatter plot shows a strong agreement between the actual and predicted market values. Most predictions lie close to the perfect prediction line, indicating excellent model performance.
 
 <p align="center">
-<img src="images/actual_vs_predicted.png" width="700">
+<img src="Images/actual_vs_predicted.png" width="700">
 </p>
 
 ---
@@ -114,7 +114,7 @@ The scatter plot shows a strong agreement between the actual and predicted marke
 Feature importance analysis shows which variables contributed the most to predicting player market value.
 
 <p align="center">
-<img src="images/feature_importance.png" width="700">
+<img src="Images/feature_importance.png" width="700">
 </p>
 
 ---
@@ -124,7 +124,7 @@ Feature importance analysis shows which variables contributed the most to predic
 Residuals are randomly distributed around zero with no strong systematic pattern, suggesting that the Random Forest model captures the relationship between the selected features and player value effectively.
 
 <p align="center">
-<img src="images/residual_plot.png" width="700">
+<img src="Images/residual_plot.png" width="700">
 </p>
 
 ---
