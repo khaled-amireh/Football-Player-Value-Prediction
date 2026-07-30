@@ -133,7 +133,7 @@ Residuals are randomly distributed around zero with no strong systematic pattern
 
 - The player's **overall rating** is by far the strongest predictor of market value.
 - **Potential** is the second most influential featur indicating that future player development significantly affects valuation.
-- Technical attributes such as shooting, passing, dribbling, and defending contribute to the prediction, although their impact is much smaller than overall rating.
+- Technical attributes such as shooting, passing, dribbling and defending contribute to the prediction, although their impact is much smaller than overall rating.
 - Increasing the number of trees improved the model performance up to **300 trees**.
 - Increasing the forest size beyond **300 trees** produced only marginal improvements while increasing training time.
 
