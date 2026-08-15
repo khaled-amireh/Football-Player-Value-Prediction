@@ -22,6 +22,20 @@ https://www.kaggle.com/datasets/thedevastator/footballpriceprediction
 | Target Variable | value_eur |
 
 ---
+## Project Structure
+
+```text
+├── Data/
+│   └── football_players.csv
+├── Images/
+│   ├── actual_vs_predicted.png
+│   ├── feature_importance.png
+│   └── residual_plot.png
+├── main.py
+├── requirements.txt
+└── README.md
+```
+---
 
 ## Features Used
 
