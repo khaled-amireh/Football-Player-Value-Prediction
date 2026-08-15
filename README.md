@@ -168,3 +168,12 @@ Residuals are randomly distributed around zero with no strong systematic pattern
 Random Forest Regression achieved excellent predictive performance with an R² score of **0.9877**.
 
 The results indicate that player ratings, particularly **overall** and **potential**, play the most significant role in determining market value. Hyperparameter tuning showed that using **300 decision trees** provides the best balance between predictive performance and computational cost for this dataset.
+
+---
+
+## Future Improvements
+
+- **Feature Engineering:** Create combined interaction features such as `age_potential_ratio` or positional role groups.
+- **Advanced Algorithms:** Test and benchmark gradient boosting models like XGBoost, LightGBM, and CatBoost.
+- **Target Transformation:** Apply log scaling on `value_eur` to handle severe target skewness and reduce error margins on high-value players.
+- **Deployment:** Build an interactive Web Dashboard using Streamlit or Flask to estimate market value in real-time.
