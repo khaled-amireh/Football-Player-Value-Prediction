@@ -22,13 +22,6 @@ https://www.kaggle.com/datasets/thedevastator/footballpriceprediction
 | Target Variable | value_eur |
 
 ---
-## Project Structure
-
-```text
-├── Data/
-
-
----
 
 ## Features Used
 
