@@ -1,4 +1,4 @@
-# Football Player Market Value Prediction using Random Forest Regression
+# Football Player Market Value Prediction
 
 ## Overview
 
