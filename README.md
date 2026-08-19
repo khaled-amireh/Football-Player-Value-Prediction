@@ -28,7 +28,7 @@ https://www.kaggle.com/datasets/thedevastator/footballpriceprediction
 ├── Data/
 │   └── football_players.csv
 ├── Images/
-│   ├── actual_vs_predicted.png
+
 
 ---
 
