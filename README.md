@@ -26,7 +26,6 @@ https://www.kaggle.com/datasets/thedevastator/footballpriceprediction
 
 ```text
 ├── Data/
-│   └── football_players.csv
 
 
 ---
