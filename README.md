@@ -30,11 +30,6 @@ https://www.kaggle.com/datasets/thedevastator/footballpriceprediction
 ├── Images/
 │   ├── actual_vs_predicted.png
 │   ├── feature_importance.png
-│   └── residual_plot.png
-├── main.py
-├── requirements.txt
-└── README.md
-```
 ---
 
 ## Features Used
