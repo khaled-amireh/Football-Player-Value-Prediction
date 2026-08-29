@@ -142,7 +142,6 @@ Residuals are randomly distributed around zero with no strong systematic pattern
 ## Technologies Used
 
 - Python
-- Pandas
 
 ---
 
