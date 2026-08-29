@@ -136,13 +136,7 @@ Residuals are randomly distributed around zero with no strong systematic pattern
 - Technical attributes such as shooting, passing, dribbling and defending contribute to the prediction, although their impact is much smaller than overall rating.
 - Increasing the number of trees improved the model performance up to **300 trees**.
 - Increasing the forest size beyond **300 trees** produced only marginal improvements while increasing training time.
-
----
-
-## Technologies Used
-
-- Python
-
+  
 ---
 
 ## Conclusion
