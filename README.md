@@ -1,5 +1,7 @@
 # Football Player Market Value Prediction
 
+![Python](https://img.shields.io/badge/Python-3.8%2B-blue)
+
 ## Overview
 
 This project predicts football players market values using a Random Forest Regression model. The model was trained on FIFA player data after applying data preprocessing, feature selection, and hyperparameter tuning. Different numbers of decision trees were evaluated to identify the best-performing model.
