@@ -240,7 +240,7 @@ jupyter notebook notebooks/market_value_prediction.ipynb
 
 ---
 
-## 🚀 Future Improvements
+##  Future Improvements
 
 - [ ] K-Fold Cross-Validation for a more robust performance estimate
 - [ ] Incorporate categorical features (position, league, nationality) via encoding
@@ -250,7 +250,7 @@ jupyter notebook notebooks/market_value_prediction.ipynb
 
 ---
 
-## ✅ Conclusion
+##  Conclusion
 
 Random Forest Regression achieved excellent predictive performance with an **R² score of 0.9877**, explaining nearly 99% of the variance in player market value.
 
