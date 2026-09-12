@@ -78,7 +78,7 @@ This project trains a **Random Forest Regression** model on FIFA player attribut
 
 ---
 
-## 🧹 Data Preprocessing
+##  Data Preprocessing
 
 - Isolated the dataset to the **14 relevant numerical features** above, dropping non-predictive or non-numerical columns
 - Removed rows containing missing values, reducing the dataset from **18,945 → 16,861 rows** (a ~11% reduction, retaining the large majority of the data)
