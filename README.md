@@ -212,7 +212,7 @@ Football-Player-Market-Value-Prediction/
 
 ---
 
-## ⚙️ Installation
+##  Installation
 
 ```bash
 # 1. Clone the repository
