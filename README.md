@@ -258,10 +258,9 @@ The results confirm that player ratings — particularly **overall** and **poten
 
 ---
 
-## 👤 Author
+##  Author
 
 **Khaled Amireh**
-[GitHub](https://github.com/khaled-amireh)
 
 ---
 
