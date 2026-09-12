@@ -126,7 +126,7 @@ Several values of `n_estimators` (number of trees) were evaluated to find the po
 
 <div align="center">
 
-### 🎯 R² Score: **0.9877**
+###  R² Score: **0.9877**
 
 </div>
 
