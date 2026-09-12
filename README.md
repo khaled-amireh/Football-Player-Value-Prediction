@@ -232,7 +232,7 @@ jupyter notebook notebooks/market_value_prediction.ipynb
 
 ---
 
-## ⚠️ Limitations
+##  Limitations
 
 - The model was evaluated on a single train/test split rather than cross-validated — reported metrics may vary somewhat across different splits.
 - Market value for elite/superstar players can be influenced by factors outside this dataset (brand value, marketability, contract situation), which likely explains the larger residuals noted for high-value outliers.
