@@ -37,7 +37,7 @@ This project trains a **Random Forest Regression** model on FIFA player attribut
 
 ---
 
-## 📊 Dataset
+##  Dataset
 
 **Source:** [Football Price Prediction — Kaggle](https://www.kaggle.com/datasets/thedevastator/footballpriceprediction)
 
