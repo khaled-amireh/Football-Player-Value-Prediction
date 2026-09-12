@@ -120,7 +120,7 @@ Several values of `n_estimators` (number of trees) were evaluated to find the po
 
 ---
 
-## 📈 Results
+##  Results
 
 ### Headline Metrics
 
