@@ -86,7 +86,7 @@ This project trains a **Random Forest Regression** model on FIFA player attribut
 
 ---
 
-## 🔬 Methodology
+##  Methodology
 
 ### Why Random Forest?
 
