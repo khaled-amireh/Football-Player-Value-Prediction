@@ -140,7 +140,7 @@ Several values of `n_estimators` (number of trees) were evaluated to find the po
 
 ---
 
-## 🖼️ Visualizations
+##  Visualizations
 
 ### Actual vs. Predicted Value
 
