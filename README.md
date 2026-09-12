@@ -193,7 +193,7 @@ Residuals are randomly scattered around zero with no strong systematic pattern â
 
 ---
 
-## ğŸ“ Project Structure
+##  Project Structure
 
 ```
 Football-Player-Market-Value-Prediction/
