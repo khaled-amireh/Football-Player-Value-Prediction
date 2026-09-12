@@ -18,7 +18,7 @@
 
 ---
 
-## 🎯 Overview
+##  Overview
 
 Football clubs, agents, and analysts routinely need to estimate a player's fair market value — for transfer negotiations, squad valuation, or scouting decisions. Market value is driven by a mix of measurable performance attributes (overall rating, technical skills) and physical traits, making it a strong candidate for a data-driven regression approach.
 
