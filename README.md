@@ -172,7 +172,7 @@ Residuals are randomly scattered around zero with no strong systematic pattern �
 
 ---
 
-## 💡 Key Insights
+##  Key Insights
 
 - **`overall` rating is the dominant predictor** of market value by a wide margin — unsurprising, since it's the single most direct summary of a player's current ability.
 - **`potential` is the second most influential feature**, indicating the market prices in *future* development, not just current performance — younger players with high ceilings command a premium.
