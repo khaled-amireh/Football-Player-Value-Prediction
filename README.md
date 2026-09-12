@@ -181,7 +181,7 @@ Residuals are randomly scattered around zero with no strong systematic pattern �
 
 ---
 
-## 🛠️ Technologies Used
+##  Technologies Used
 
 | Category | Tools |
 |---|---|
