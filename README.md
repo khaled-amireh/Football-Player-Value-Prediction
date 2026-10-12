@@ -247,7 +247,7 @@ jupyter notebook notebooks/market_value_prediction.ipynb
 
 ---
 
-## ⚠️ Limitations
+##  Limitations
 
 <details>
 <summary><b>Click to see what this model does not do (yet)</b></summary>
@@ -262,13 +262,13 @@ jupyter notebook notebooks/market_value_prediction.ipynb
 
 ---
 
-## ✅ Conclusion
+##  Conclusion
 
 Random Forest Regression delivered excellent results, with an **R² of 0.9877**, explaining nearly 99% of the variance in player market value. Ratings, especially **`overall`** and **`potential`**, are the main drivers of price. Tuning showed that **300 trees** is the best balance of accuracy and compute for this dataset, with diminishing (and occasionally negative) returns beyond it.
 
 ---
 
-## 🚀 Future Improvements
+##  Future Improvements
 
 - [ ] K-Fold Cross-Validation for a sturdier performance estimate
 - [ ] Add categorical features (position, league, nationality) via encoding
@@ -278,11 +278,10 @@ Random Forest Regression delivered excellent results, with an **R² of 0.9877**,
 
 ---
 
-## 👤 Author
+##  Author
 
 <p align="center">
   <b>Khaled Amireh</b><br/>
-  <a href="https://github.com/khaled-amireh">🔗 GitHub</a>
 </p>
 
 <p align="center"><i>If this project helped you, drop a ⭐ on the repo.</i></p>
