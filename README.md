@@ -188,7 +188,7 @@ The feature importance chart shows which attributes the scouts leaned on most:
 |:-:|---|---|
 |  | **`overall`** | The dominant predictor by a wide margin: the best single summary of current ability |
 |  | **`potential`** | The market pays for the *future*: young players with a high ceiling cost more |
-| 🎽 | **Technical skills** | Shooting, passing, dribbling and defending matter, but each has a much smaller impact |
+|  | **Technical skills** | Shooting, passing, dribbling and defending matter, but each has a much smaller impact |
 
 <p align="center">
   <img src="Images/feature_importance.png" alt="Feature Importance" width="700">
@@ -196,7 +196,7 @@ The feature importance chart shows which attributes the scouts leaned on most:
 
 ---
 
-## 🧰 Technologies Used
+##  Technologies Used
 
 | Category | Tools |
 |---|---|
@@ -208,7 +208,7 @@ The feature importance chart shows which attributes the scouts leaned on most:
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 Football-Player-Market-Value-Prediction/
@@ -227,7 +227,7 @@ Football-Player-Market-Value-Prediction/
 
 ---
 
-## ⚙️ Installation
+##  Installation
 
 ```bash
 # 1. Clone the repository
