@@ -180,14 +180,14 @@ xychart-beta
 
 ---
 
-## 🥇 What Drives a Player's Price?
+##  What Drives a Player's Price?
 
 The feature importance chart shows which attributes the scouts leaned on most:
 
 | Rank | Driver | The story |
 |:-:|---|---|
-| 🥇 | **`overall`** | The dominant predictor by a wide margin: the best single summary of current ability |
-| 🥈 | **`potential`** | The market pays for the *future*: young players with a high ceiling cost more |
+|  | **`overall`** | The dominant predictor by a wide margin: the best single summary of current ability |
+|  | **`potential`** | The market pays for the *future*: young players with a high ceiling cost more |
 | 🎽 | **Technical skills** | Shooting, passing, dribbling and defending matter, but each has a much smaller impact |
 
 <p align="center">
