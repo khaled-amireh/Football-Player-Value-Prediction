@@ -32,7 +32,7 @@
 
 ---
 
-## ⚽ The Transfer Market Question
+##  The Transfer Market Question
 
 > [!NOTE]
 > **In one sentence:** this project teaches a Random Forest to look at a FIFA player's attributes (rating, potential, pace, shooting and more) and predict his **market value in euros**, explaining about **98.8%** of why players' prices differ.
