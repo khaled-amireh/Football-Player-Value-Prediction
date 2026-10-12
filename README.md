@@ -62,7 +62,7 @@ Players kept after cleaning   ████████████████�
 ```
 
 <details open>
-<summary><b>📋 The 14 attributes the model reads</b></summary>
+<summary><b> The 14 attributes the model reads</b></summary>
 
 <br/>
 
