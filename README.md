@@ -93,12 +93,12 @@ Players kept after cleaning   ████████████████�
 
 ```mermaid
 flowchart LR
-    A["📥 FIFA player data<br/>18,945 rows"] --> B["🎯 Keep 14 numeric<br/>attributes"]
-    B --> C["🧹 Remove rows<br/>with missing values<br/>16,861 left"]
-    C --> D["✂️ Split<br/>80% train / 20% test"]
-    D --> E["🌲 Train Random Forest<br/>tune number of trees"]
-    E --> F["🏆 Pick best: 300 trees"]
-    F --> G["📊 Evaluate on the<br/>unseen 20%"]
+    A[" FIFA player data<br/>18,945 rows"] --> B[" Keep 14 numeric<br/>attributes"]
+    B --> C[" Remove rows<br/>with missing values<br/>16,861 left"]
+    C --> D[" Split<br/>80% train / 20% test"]
+    D --> E[" Train Random Forest<br/>tune number of trees"]
+    E --> F[" Pick best: 300 trees"]
+    F --> G[" Evaluate on the<br/>unseen 20%"]
 
     classDef pitch fill:#14532d,stroke:#4ade80,color:#fff;
     classDef win fill:#166534,stroke:#bbf7d0,color:#fff;
