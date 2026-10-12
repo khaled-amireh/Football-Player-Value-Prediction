@@ -114,9 +114,9 @@ flowchart LR
 
 Player value is not a straight line. A high `overall` rating *plus* high `potential` *plus* youth compounds into something much bigger than each part alone, and a simple linear model struggles with that. Random Forest:
 
-- ✅ Captures non-linear relationships and interactions on its own
-- ✅ Handles outliers well and needs no feature scaling
-- ✅ Shows which features mattered most (great for explanations)
+-  Captures non-linear relationships and interactions on its own
+-  Handles outliers well and needs no feature scaling
+-  Shows which features mattered most (great for explanations)
 
 ---
 
