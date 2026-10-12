@@ -46,7 +46,7 @@ Imagine a club has to price a player. It asks **300 scouts**. Each scout looks a
 
 ---
 
-## 📂 Dataset
+##  Dataset
 
 **Source:** [Football Price Prediction on Kaggle](https://www.kaggle.com/datasets/thedevastator/footballpriceprediction)
 
