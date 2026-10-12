@@ -1,63 +1,74 @@
-<div align="center">
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=egg&color=0:052e16,50:15803d,100:86efac&height=230&section=header&text=Football%20Player%20Market%20Value&fontSize=40&fontColor=ffffff&animation=jelly&fontAlignY=40&desc=300%20decision%20trees%20acting%20as%20a%20panel%20of%20scouts&descAlignY=62&descSize=18" alt="header"/>
+</p>
 
-#  Football Player Market Value Prediction
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=17&pause=900&color=16A34A&center=true&vCenter=true&width=650&lines=Scouting+16%2C861+players...;Reading+overall%2C+potential%2C+pace%2C+shooting...;300+trees+vote+on+every+price+tag;R%C2%B2+score%3A+0.988" alt="typing-svg" />
+</p>
 
-### Predicting FIFA player market values with Random Forest Regression
+<p align="center">
+  <img src="https://img.shields.io/badge/R%C2%B2%20Score-0.9877-16a34a?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Typical%20Error%20(MAE)-%E2%82%AC134.7K-0f766e?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Trees-300-166534?style=for-the-badge" />
+</p>
 
-![Python](https://img.shields.io/badge/Python-3.8%2B-3776AB?style=flat-square&logo=python&logoColor=white)
-![Scikit-learn](https://img.shields.io/badge/Scikit--learn-Random%20Forest-F7931E?style=flat-square&logo=scikit-learn&logoColor=white)
-![Pandas](https://img.shields.io/badge/Pandas-Data%20Processing-150458?style=flat-square&logo=pandas&logoColor=white)
-![Status](https://img.shields.io/badge/Status-Completed-2ea44f?style=flat-square)
-![License](https://img.shields.io/badge/License-MIT-lightgrey?style=flat-square)
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.8%2B-3776AB?style=flat-square&logo=python&logoColor=white" />
+  <img src="https://img.shields.io/badge/Scikit--learn-Random%20Forest-F7931E?style=flat-square&logo=scikit-learn&logoColor=white" />
+  <img src="https://img.shields.io/badge/Pandas-Data%20Processing-150458?style=flat-square&logo=pandas&logoColor=white" />
+  <img src="https://img.shields.io/badge/Status-Completed-2ea44f?style=flat-square" />
+  <img src="https://img.shields.io/badge/License-MIT-lightgrey?style=flat-square" />
+</p>
 
-*An end-to-end regression pipeline that predicts a player's market value (€) from FIFA attribute data — achieving an R² of 0.988.*
-
-[Overview](#-overview) • [Dataset](#-dataset) • [Methodology](#-methodology) • [Results](#-results) • [Insights](#-key-insights) • [Installation](#-installation)
-
-</div>
-
----
-
-##  Overview
-
-Football clubs, agents, and analysts routinely need to estimate a player's fair market value — for transfer negotiations, squad valuation, or scouting decisions. Market value is driven by a mix of measurable performance attributes (overall rating, technical skills) and physical traits, making it a strong candidate for a data-driven regression approach.
-
-This project trains a **Random Forest Regression** model on FIFA player attribute data to predict `value_eur`, systematically tuning the number of trees (`n_estimators`) to find the best trade-off between accuracy and computational cost.
-
-**What this project demonstrates:**
-
-| Capability | Implementation |
-|---|---|
-| Data cleaning | Missing-value removal on an 18.9K-row dataset |
-| Feature selection | 14 relevant numerical attributes isolated from the full player schema |
-| Leakage-safe evaluation | 80/20 train/test split |
-| Hyperparameter tuning | Systematic comparison across 5 forest sizes |
-| Model interpretability | Feature importance ranking to explain valuation drivers |
-| Diagnostic evaluation | Actual-vs-predicted and residual analysis, beyond headline metrics |
+<p align="center">
+  <a href="#-the-transfer-market-question">The Question</a> •
+  <a href="#-dataset">Dataset</a> •
+  <a href="#-the-scouting-process">Process</a> •
+  <a href="#-how-many-scouts">How Many Scouts</a> •
+  <a href="#-results">Results</a> •
+  <a href="#-what-drives-a-players-price">Price Drivers</a> •
+  <a href="#-installation">Install</a>
+</p>
 
 ---
 
-##  Dataset
+## ⚽ The Transfer Market Question
 
-**Source:** [Football Price Prediction — Kaggle](https://www.kaggle.com/datasets/thedevastator/footballpriceprediction)
+> [!NOTE]
+> **In one sentence:** this project teaches a Random Forest to look at a FIFA player's attributes (rating, potential, pace, shooting and more) and predict his **market value in euros**, explaining about **98.8%** of why players' prices differ.
 
-### Dataset Summary
+**Explain it like I'm five:**
+Imagine a club has to price a player. It asks **300 scouts**. Each scout looks at the player a little differently and writes down a price. The club takes the **average of all 300 guesses**. That is exactly how a Random Forest works: every "scout" is a decision tree, and the final price is their combined vote.
+
+```
+📋 Player attributes  ➜  🧑‍💼 300 scouts (trees) each guess a price  ➜  🧮 Average of all guesses  ➜  💶 Market value
+```
+
+---
+
+## 📂 Dataset
+
+**Source:** [Football Price Prediction on Kaggle](https://www.kaggle.com/datasets/thedevastator/footballpriceprediction)
 
 | Property | Value |
 |---|---:|
-| Original Rows | 18,945 |
-| Rows After Preprocessing | 16,861 |
-| Selected Features | 14 |
-| Target Variable | `value_eur` |
+| Original rows | 18,945 |
+| Rows after cleaning | 16,861 |
+| Selected features | 14 |
+| Target variable | `value_eur` |
 
-### Feature Schema
+```
+Players kept after cleaning   █████████████████░░░  ~89%   (16,861 of 18,945)
+```
 
 <details open>
-<summary><b>Selected Numerical Features</b></summary>
+<summary><b>📋 The 14 attributes the model reads</b></summary>
 
-| Feature | Description |
+<br/>
+
+| Feature | What it tells the scouts |
 |---|---|
-| `age` | Player's age |
+| `age` | How old the player is |
 | `overall` | Current overall rating |
 | `potential` | Projected ceiling rating |
 | `height_cm` | Height in centimeters |
@@ -74,118 +85,122 @@ This project trains a **Random Forest Regression** model on FIFA player attribut
 
 </details>
 
-**Target:** `value_eur` — the player's market value in euros.
+**Target:** `value_eur`, the player's market value in euros.
 
 ---
 
-##  Data Preprocessing
+## 🧭 The Scouting Process
 
-- Isolated the dataset to the **14 relevant numerical features** above, dropping non-predictive or non-numerical columns
-- Removed rows containing missing values, reducing the dataset from **18,945 → 16,861 rows** (a ~11% reduction, retaining the large majority of the data)
-- Split the cleaned dataset into **80% training / 20% testing** subsets
+```mermaid
+flowchart LR
+    A["📥 FIFA player data<br/>18,945 rows"] --> B["🎯 Keep 14 numeric<br/>attributes"]
+    B --> C["🧹 Remove rows<br/>with missing values<br/>16,861 left"]
+    C --> D["✂️ Split<br/>80% train / 20% test"]
+    D --> E["🌲 Train Random Forest<br/>tune number of trees"]
+    E --> F["🏆 Pick best: 300 trees"]
+    F --> G["📊 Evaluate on the<br/>unseen 20%"]
 
----
+    classDef pitch fill:#14532d,stroke:#4ade80,color:#fff;
+    classDef win fill:#166534,stroke:#bbf7d0,color:#fff;
+    class A,B,C,D,E,G pitch;
+    class F win;
+```
 
-##  Methodology
+- 🎯 **Feature selection:** isolated the 14 relevant numeric attributes and dropped non-predictive or non-numeric columns.
+- 🧹 **Cleaning:** removed rows with missing values, going from **18,945 to 16,861** rows. Roughly 11% was lost and the large majority kept.
+- ✂️ **Train/test split:** **80% training, 20% testing.** Think of it as practicing drills in training (80%) and then playing a real match (20%) the team has never seen.
 
-### Why Random Forest?
+### 🌲 Why Random Forest?
 
-Random Forest Regression was chosen because player valuation is driven by **non-linear interactions** between attributes (e.g., a high `overall` rating combined with high `potential` and youth compounds value in a way a linear model can't easily capture). As an ensemble of decision trees, Random Forest:
+Player value is not a straight line. A high `overall` rating *plus* high `potential` *plus* youth compounds into something much bigger than each part alone, and a simple linear model struggles with that. Random Forest:
 
-- Captures non-linear relationships and feature interactions natively
-- Is robust to outliers and doesn't require feature scaling
-- Provides built-in feature importance for interpretability
-
-### Hyperparameter Tuning
-
-Several values of `n_estimators` (number of trees) were evaluated to find the point of diminishing returns:
-
-| Trees | R² Score | MAE (€) | RMSE (€) |
-|---:|---:|---:|---:|
-| 10 | 0.984191 | 150,649.42 | 669,794.14 |
-| 100 | 0.986909 | 136,935.41 | 609,523.61 |
-| 200 | 0.987470 | 135,557.55 | 596,301.57 |
-| **300** | **0.987713** | **134,716.99** | **590,496.91** |
-| 500 | 0.987561 | 134,317.84 | 594,148.20 |
-
-**Observation:** performance improves steadily up to **300 trees**, then plateaus — 500 trees actually performs marginally *worse* on this test split while costing more compute. This is a classic Random Forest signature: past a certain ensemble size, additional trees reduce variance only negligibly while training time keeps growing.
-
-### Final Model Configuration
-
-| Parameter | Value |
-|---|---:|
-| Model | Random Forest Regressor |
-| `n_estimators` | 300 |
-| `random_state` | 42 |
+- ✅ Captures non-linear relationships and interactions on its own
+- ✅ Handles outliers well and needs no feature scaling
+- ✅ Shows which features mattered most (great for explanations)
 
 ---
 
-##  Results
+## 📈 How Many Scouts?
 
-### Headline Metrics
+More scouts usually help, but only up to a point. Five forest sizes were tested:
+
+| Trees | R² Score | MAE (€) | RMSE (€) | |
+|---:|---:|---:|---:|:-:|
+| 10 | 0.984191 | 150,649.42 | 669,794.14 | |
+| 100 | 0.986909 | 136,935.41 | 609,523.61 | |
+| 200 | 0.987470 | 135,557.55 | 596,301.57 | |
+| **300** | **0.987713** | **134,716.99** | **590,496.91** | 🏆 |
+| 500 | 0.987561 | 134,317.84 | 594,148.20 | 📉 |
+
+```mermaid
+xychart-beta
+    title "R² score by number of trees"
+    x-axis ["10", "100", "200", "300", "500"]
+    y-axis "R² score" 0.984 --> 0.988
+    line [0.984191, 0.986909, 0.987470, 0.987713, 0.987561]
+```
+
+> [!IMPORTANT]
+> **The sweet spot is 300 trees.** Accuracy climbs steadily until 300, then flattens. At 500 trees the R² is actually a touch *lower* on this test split while costing more compute. It is like hiring scout number 301: the average barely moves, but the payroll keeps growing.
+
+**Final model:** Random Forest Regressor · `n_estimators = 300` · `random_state = 42`
+
+---
+
+## 📊 Results
 
 <div align="center">
 
-###  R² Score: **0.9877**
+### 🎯 R² Score: **0.9877**
 
 </div>
 
-| Metric | Formula | Value | Interpretation |
+| Metric | Formula | Value | In plain words |
 |---|---|---:|---|
-| **R² Score** | 1 − (SS_res / SS_tot) | **0.9877** | The model explains ~98.8% of the variance in player market value |
-| **MAE** | (1/n)·Σ\|yᵢ − ŷᵢ\| | **€134,716.99** | On average, predictions are off by ~€135K |
-| **RMSE** | √[(1/n)·Σ(yᵢ − ŷᵢ)²] | **€590,496.91** | Typical error, penalizing large misses more heavily than MAE |
+| **R² Score** | 1 − (SS_res / SS_tot) | **0.9877** | Explains about 98.8% of why player values differ |
+| **MAE** | (1/n)·Σ\|yᵢ − ŷᵢ\| | **€134,716.99** | A typical prediction is off by roughly €135K |
+| **RMSE** | √[(1/n)·Σ(yᵢ − ŷᵢ)²] | **€590,496.91** | Same idea, but big misses are punished harder |
 
-> The gap between MAE and RMSE suggests the model has some larger errors on a subset of predictions — likely high-value outlier players (superstars), whose valuations are driven by market and reputation factors beyond the attributes in this dataset.
+> [!TIP]
+> **Why is RMSE so much bigger than MAE?** A few large misses pull RMSE up. Those are most likely **superstar players**, whose prices depend on things this dataset can't see, such as brand value and marketability.
 
----
+### 🔍 Visual check-ups
 
-##  Visualizations
-
-### Actual vs. Predicted Value
-
-Predictions cluster tightly around the perfect-prediction diagonal, visually confirming the high R² score and showing the model generalizes well across the value range.
+**Actual vs. Predicted:** if every guess were perfect, all dots would sit on the diagonal line. They hug it tightly, which confirms the high R² across the value range.
 
 <p align="center">
-  <img src="Images/actual_vs_predicted.png" width="700">
+  <img src="Images/actual_vs_predicted.png" alt="Actual vs Predicted" width="700">
+</p>
+
+**Residuals (the mistakes):** they scatter randomly around zero with no strong pattern. That means the model isn't consistently over- or under-pricing any particular group of players.
+
+<p align="center">
+  <img src="Images/residual_plot.png" alt="Residual Plot" width="700">
 </p>
 
 ---
 
-### Feature Importance
+## 🥇 What Drives a Player's Price?
 
-Ranks which attributes the Random Forest relied on most heavily when predicting market value — key for explaining *why* the model values a player the way it does, not just *what* it predicts.
+The feature importance chart shows which attributes the scouts leaned on most:
+
+| Rank | Driver | The story |
+|:-:|---|---|
+| 🥇 | **`overall`** | The dominant predictor by a wide margin: the best single summary of current ability |
+| 🥈 | **`potential`** | The market pays for the *future*: young players with a high ceiling cost more |
+| 🎽 | **Technical skills** | Shooting, passing, dribbling and defending matter, but each has a much smaller impact |
 
 <p align="center">
-  <img src="Images/feature_importance.png" width="700">
+  <img src="Images/feature_importance.png" alt="Feature Importance" width="700">
 </p>
 
 ---
 
-### Residual Plot
-
-Residuals are randomly scattered around zero with no strong systematic pattern — evidence that the model isn't systematically over- or under-predicting for any particular value range, and that it has captured the underlying structure in the data rather than a biased approximation of it.
-
-<p align="center">
-  <img src="Images/residual_plot.png" width="700">
-</p>
-
----
-
-##  Key Insights
-
-- **`overall` rating is the dominant predictor** of market value by a wide margin — unsurprising, since it's the single most direct summary of a player's current ability.
-- **`potential` is the second most influential feature**, indicating the market prices in *future* development, not just current performance — younger players with high ceilings command a premium.
-- **Technical attributes** (shooting, passing, dribbling, defending) contribute meaningfully but with far smaller individual impact than `overall` and `potential`.
-- **Forest size scaling**: performance improved consistently up to **300 trees**, after which additional trees yielded only marginal (or slightly negative) returns — confirming 300 as the practical sweet spot for this dataset.
-
----
-
-##  Technologies Used
+## 🧰 Technologies Used
 
 | Category | Tools |
 |---|---|
-| Language | Python |
+| Language | 🐍 Python |
 | Data Handling | Pandas, NumPy |
 | Visualization | Matplotlib |
 | Machine Learning | Scikit-learn (Random Forest Regressor) |
@@ -193,7 +208,7 @@ Residuals are randomly scattered around zero with no strong systematic pattern �
 
 ---
 
-##  Project Structure
+## 📁 Project Structure
 
 ```
 Football-Player-Market-Value-Prediction/
@@ -212,7 +227,7 @@ Football-Player-Market-Value-Prediction/
 
 ---
 
-##  Installation
+## ⚙️ Installation
 
 ```bash
 # 1. Clone the repository
@@ -232,40 +247,46 @@ jupyter notebook notebooks/market_value_prediction.ipynb
 
 ---
 
-##  Limitations
+## ⚠️ Limitations
 
-- The model was evaluated on a single train/test split rather than cross-validated — reported metrics may vary somewhat across different splits.
-- Market value for elite/superstar players can be influenced by factors outside this dataset (brand value, marketability, contract situation), which likely explains the larger residuals noted for high-value outliers.
-- Only numerical FIFA attributes were used; categorical context (club, league, nationality, position) was not incorporated and could add predictive signal.
+<details>
+<summary><b>Click to see what this model does not do (yet)</b></summary>
 
----
+<br/>
 
-##  Future Improvements
+- Evaluated on a single train/test split, not cross-validated, so metrics may vary a little on a different split.
+- Elite and superstar valuations depend on factors outside this dataset (brand value, marketability, contract situation), which likely explains the larger residuals for high-value players.
+- Only numeric FIFA attributes were used. Club, league, nationality and position were not included and could add signal.
 
-- [ ] K-Fold Cross-Validation for a more robust performance estimate
-- [ ] Incorporate categorical features (position, league, nationality) via encoding
-- [ ] Hyperparameter tuning beyond `n_estimators` (max_depth, min_samples_split)
-- [ ] Benchmark against Gradient Boosting (XGBoost/LightGBM)
-- [ ] SHAP value analysis for deeper, per-prediction interpretability
+</details>
 
 ---
 
-##  Conclusion
+## ✅ Conclusion
 
-Random Forest Regression achieved excellent predictive performance with an **R² score of 0.9877**, explaining nearly 99% of the variance in player market value.
-
-The results confirm that player ratings — particularly **overall** and **potential** — are the dominant drivers of valuation. Hyperparameter tuning showed that **300 decision trees** provides the best balance between predictive performance and computational cost for this dataset, with diminishing (and occasionally negative) returns beyond that point.
+Random Forest Regression delivered excellent results, with an **R² of 0.9877**, explaining nearly 99% of the variance in player market value. Ratings, especially **`overall`** and **`potential`**, are the main drivers of price. Tuning showed that **300 trees** is the best balance of accuracy and compute for this dataset, with diminishing (and occasionally negative) returns beyond it.
 
 ---
 
-##  Author
+## 🚀 Future Improvements
 
-**Khaled Amireh**
+- [ ] K-Fold Cross-Validation for a sturdier performance estimate
+- [ ] Add categorical features (position, league, nationality) via encoding
+- [ ] Tune more than `n_estimators` (`max_depth`, `min_samples_split`)
+- [ ] Benchmark against XGBoost / LightGBM
+- [ ] SHAP analysis to explain each individual player's price
 
 ---
 
-<div align="center">
+## 👤 Author
 
-*If you found this project useful, consider giving it a ⭐ on GitHub.*
+<p align="center">
+  <b>Khaled Amireh</b><br/>
+  <a href="https://github.com/khaled-amireh">🔗 GitHub</a>
+</p>
 
-</div>
+<p align="center"><i>If this project helped you, drop a ⭐ on the repo.</i></p>
+
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:86efac,50:15803d,100:052e16&height=110&section=footer" alt="footer"/>
+</p>
