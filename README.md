@@ -108,7 +108,7 @@ flowchart LR
 
 -  **Feature selection:** isolated the 14 relevant numeric attributes and dropped non-predictive or non-numeric columns.
 -  **Cleaning:** removed rows with missing values, going from **18,945 to 16,861** rows. Roughly 11% was lost and the large majority kept.
-- ✂️ **Train/test split:** **80% training, 20% testing.** Think of it as practicing drills in training (80%) and then playing a real match (20%) the team has never seen.
+-  **Train/test split:** **80% training, 20% testing.** Think of it as practicing drills in training (80%) and then playing a real match (20%) the team has never seen.
 
 ### 🌲 Why Random Forest?
 
