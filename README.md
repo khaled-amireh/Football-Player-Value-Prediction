@@ -147,11 +147,11 @@ xychart-beta
 
 ---
 
-## 📊 Results
+##  Results
 
 <div align="center">
 
-### 🎯 R² Score: **0.9877**
+###  R² Score: **0.9877**
 
 </div>
 
@@ -164,7 +164,7 @@ xychart-beta
 > [!TIP]
 > **Why is RMSE so much bigger than MAE?** A few large misses pull RMSE up. Those are most likely **superstar players**, whose prices depend on things this dataset can't see, such as brand value and marketability.
 
-### 🔍 Visual check-ups
+###  Visual check-ups
 
 **Actual vs. Predicted:** if every guess were perfect, all dots would sit on the diagonal line. They hug it tightly, which confirms the high R² across the value range.
 
