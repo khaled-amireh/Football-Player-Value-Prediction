@@ -89,7 +89,7 @@ Players kept after cleaning   ████████████████�
 
 ---
 
-## 🧭 The Scouting Process
+##  The Scouting Process
 
 ```mermaid
 flowchart LR
