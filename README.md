@@ -120,7 +120,7 @@ Player value is not a straight line. A high `overall` rating *plus* high `potent
 
 ---
 
-## 📈 How Many Scouts?
+##  How Many Scouts?
 
 More scouts usually help, but only up to a point. Five forest sizes were tested:
 
@@ -129,7 +129,7 @@ More scouts usually help, but only up to a point. Five forest sizes were tested:
 | 10 | 0.984191 | 150,649.42 | 669,794.14 | |
 | 100 | 0.986909 | 136,935.41 | 609,523.61 | |
 | 200 | 0.987470 | 135,557.55 | 596,301.57 | |
-| **300** | **0.987713** | **134,716.99** | **590,496.91** | 🏆 |
+| **300** | **0.987713** | **134,716.99** | **590,496.91** |  |
 | 500 | 0.987561 | 134,317.84 | 594,148.20 | 📉 |
 
 ```mermaid
