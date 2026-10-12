@@ -110,7 +110,7 @@ flowchart LR
 -  **Cleaning:** removed rows with missing values, going from **18,945 to 16,861** rows. Roughly 11% was lost and the large majority kept.
 -  **Train/test split:** **80% training, 20% testing.** Think of it as practicing drills in training (80%) and then playing a real match (20%) the team has never seen.
 
-### 🌲 Why Random Forest?
+###  Why Random Forest?
 
 Player value is not a straight line. A high `overall` rating *plus* high `potential` *plus* youth compounds into something much bigger than each part alone, and a simple linear model struggles with that. Random Forest:
 
