@@ -41,7 +41,7 @@
 Imagine a club has to price a player. It asks **300 scouts**. Each scout looks at the player a little differently and writes down a price. The club takes the **average of all 300 guesses**. That is exactly how a Random Forest works: every "scout" is a decision tree, and the final price is their combined vote.
 
 ```
-📋 Player attributes  ➜  🧑‍💼 300 scouts (trees) each guess a price  ➜  🧮 Average of all guesses  ➜  💶 Market value
+ Player attributes  ➜   300 scouts (trees) each guess a price  ➜   Average of all guesses  ➜   Market value
 ```
 
 ---
