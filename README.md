@@ -238,7 +238,9 @@ Football-Player-Value-Prediction/
 │   └── residual_plot.png
 ├── LICENSE
 ├── README.md
-└── requirements.txt
+├── requirements.txt
+└── tests/
+    └── test_notebook.py
 ```
 
 **Required local input:** place `footballData.csv` beside the root notebook. It is not a tracked project file. The repository has no `data/`, `notebooks/`, `src/`, saved model, or deployment files.
@@ -288,6 +290,14 @@ python -m notebook Football_Player_Value_Prediction.ipynb
 ```
 
 **Reproducibility status:** notebook metadata records **Python 3.11.9**. `requirements.txt` lists Pandas, NumPy, Matplotlib, scikit-learn, and Jupyter without version pins. The original environment is not fully captured, and the CSV version is not recorded. Fixed seeds help repeat the split and fitting, but do not guarantee identical results across data and dependency changes. Installation and a clean training run were not performed for this documentation update.
+
+**Run the small regression tests** after installing requirements:
+
+```bash
+python -m unittest discover -s tests -v
+```
+
+These tests exercise individual notebook cells with tiny synthetic inputs. They do not load the original player CSV, train the forest, or refresh the historical notebook outputs. The cleaning diagnostic now prints its missing-value counts as well as the row count on the next execution.
 
 ## 14 Reliability and Limitations
 
