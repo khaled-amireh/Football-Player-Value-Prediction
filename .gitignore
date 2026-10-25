@@ -1,0 +1,18 @@
+# Local input is obtained separately; preserve source licensing and provenance.
+/footballData.csv
+
+# Python environments, caches, and build output.
+/.venv/
+/venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Jupyter creates these beside notebooks.
+.ipynb_checkpoints/
+
+# Local editor and operating-system files.
+/.vscode/
+/.idea/
+.DS_Store
+Thumbs.db
