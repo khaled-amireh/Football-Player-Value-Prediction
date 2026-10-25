@@ -234,7 +234,8 @@ Core project files (editor and Git configuration omitted):
 Football-Player-Value-Prediction/
 ├── Football_Player_Value_Prediction.ipynb
 ├── docs/
-│   └── DATA.md
+│   ├── DATA.md
+│   └── TROUBLESHOOTING.md
 ├── Images/
 │   ├── actual_vs_predicted.png
 │   ├── feature_importance.png
@@ -292,6 +293,8 @@ python -m pip install -r requirements.txt
 ```bash
 python -m notebook Football_Player_Value_Prediction.ipynb
 ```
+
+If imports fail, the CSV cannot be found, or PowerShell blocks activation, use the [setup troubleshooting guide](docs/TROUBLESHOOTING.md). It includes interpreter checks, named-kernel registration, and commands that use the virtual environment directly.
 
 **Reproducibility status:** notebook metadata records **Python 3.11.9**. `requirements.txt` lists Pandas, NumPy, Matplotlib, scikit-learn, and Jupyter without version pins. The original environment is not fully captured, and the CSV version is not recorded. Fixed seeds help repeat the split and fitting, but do not guarantee identical results across data and dependency changes. Installation and a clean training run were not performed for this documentation update.
 
