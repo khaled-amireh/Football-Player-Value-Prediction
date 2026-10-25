@@ -66,6 +66,8 @@ The implemented inputs describe in-game ability, projected potential, physique, 
 
 Both `df.info()` and `df.describe()` support the **18,944** input-record count. The full input includes many other missing fields, but cleaning applies only to the selected 15 columns.
 
+See the [dataset provenance guide](docs/DATA.md) for the required columns, source-recovery options, and commands to record a local checksum without changing the input.
+
 **Provenance boundary:** the notebook records the local filename, not a download URL, dataset version, checksum, or explicit FIFA edition. Direct checks of the cited Kaggle page and API returned **HTTP 404 in this environment** during this update, despite a cached listing entry. Current download access, file metadata, data-use terms, and the exact archive filename remain unverified. Faithful reproduction requires the original CSV from a working source; do not assume the repository's MIT license licenses the dataset.
 
 ## 04 Machine Learning Architecture
@@ -231,6 +233,8 @@ Core project files (editor and Git configuration omitted):
 ```text
 Football-Player-Value-Prediction/
 ├── Football_Player_Value_Prediction.ipynb
+├── docs/
+│   └── DATA.md
 ├── Images/
 │   ├── actual_vs_predicted.png
 │   ├── feature_importance.png
