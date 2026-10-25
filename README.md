@@ -244,8 +244,11 @@ Football-Player-Value-Prediction/
 ├── LICENSE
 ├── README.md
 ├── requirements.txt
-└── tests/
-    └── test_notebook.py
+├── tests/
+│   ├── test_notebook.py
+│   └── test_repository.py
+└── tools/
+    └── check_repository.py
 ```
 
 **Required local input:** place `footballData.csv` beside the root notebook. It is not a tracked project file. The repository has no `data/`, `notebooks/`, `src/`, saved model, or deployment files.
@@ -305,6 +308,14 @@ python -m unittest discover -s tests -v
 ```
 
 These tests exercise individual notebook cells with tiny synthetic inputs. They do not load the original player CSV, train the forest, or refresh the historical notebook outputs. The cleaning diagnostic now prints its missing-value counts as well as the row count on the next execution.
+
+**Check documentation and recorded evidence offline:**
+
+```bash
+python tools/check_repository.py
+```
+
+This standard-library-only command checks local Markdown/image paths and anchors, notebook Python syntax, and whether the README's feature names and reported metrics agree with the notebook. It returns a nonzero exit code with file-specific messages on failure. It does not check external website availability or execute notebook cells. The unit tests also cover broken references and stale evidence using temporary fixtures.
 
 ## 14 Reliability and Limitations
 
