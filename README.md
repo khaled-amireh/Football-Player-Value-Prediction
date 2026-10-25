@@ -235,6 +235,7 @@ Football-Player-Value-Prediction/
 ├── .github/
 │   └── workflows/
 │       └── checks.yml
+├── CONTRIBUTING.md
 ├── Football_Player_Value_Prediction.ipynb
 ├── docs/
 │   ├── DATA.md
@@ -350,6 +351,8 @@ Every item below is **unimplemented future work**.
 - [ ] Add permutation importance and SHAP explanations with correlated-feature caveats.
 - [ ] Pin dependencies, record the dataset version and checksum, and verify a clean notebook execution.
 - [ ] Serialize a validated model and optionally build an interactive player-value estimator with clear prediction limits.
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for the local validation workflow, notebook evidence safeguards, and guidance for focused changes.
 
 ## 16 Author and License
 
