@@ -228,10 +228,13 @@ These are **predictive importance scores within this fitted forest**, not causal
 
 ## 12 Repository Structure
 
-Core project files (editor and Git configuration omitted):
+Core project files (editor and Git attributes/ignore configuration omitted):
 
 ```text
 Football-Player-Value-Prediction/
+├── .github/
+│   └── workflows/
+│       └── checks.yml
 ├── Football_Player_Value_Prediction.ipynb
 ├── docs/
 │   ├── DATA.md
@@ -316,6 +319,8 @@ python tools/check_repository.py
 ```
 
 This standard-library-only command checks local Markdown/image paths and anchors, notebook Python syntax, and whether the README's feature names and reported metrics agree with the notebook. It returns a nonzero exit code with file-specific messages on failure. It does not check external website availability or execute notebook cells. The unit tests also cover broken references and stale evidence using temporary fixtures.
+
+The [Repository checks workflow](.github/workflows/checks.yml) runs these checks and tests on Ubuntu and Windows with Python 3.11 for pushes and pull requests. It installs the declared dependencies but does not download the dataset or train a model. These checks validate repository consistency, not the historical ML performance.
 
 ## 14 Reliability and Limitations
 
