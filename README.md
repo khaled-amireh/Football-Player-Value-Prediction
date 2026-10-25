@@ -19,9 +19,13 @@
   <img src="https://img.shields.io/badge/Jupyter-07131F?style=flat-square&amp;logo=jupyter&amp;logoColor=F1F5F9" alt="Jupyter Notebook">
 </p>
 
-| Players loaded | Players retained | Input features | Saved R² | Saved MAE | Saved RMSE |
-|---:|---:|---:|---:|---:|---:|
-| **18,944** | **16,861** | **14** | **0.987713** | **€134,716.99** | **€590,496.91** |
+**18,944 players loaded · 16,861 complete records · 14 input features**
+
+| Saved metric | Result |
+|---|---:|
+| **R²** | **0.987713** |
+| **MAE** | **€134,716.99** |
+| **RMSE** | **€590,496.91** |
 
 > **Evidence scope:** these figures are supported by the code and saved outputs in [the notebook](Football_Player_Value_Prediction.ipynb). Metrics describe the 300-tree model on a single random 80/20 split. Training was not rerun for this documentation update; these are dataset valuations, not observed transfer fees.
 
@@ -222,7 +226,7 @@ These are **predictive importance scores within this fitted forest**, not causal
 
 ## 12 Repository Structure
 
-The tracked project files, plus the new banner supplied with this README:
+Core project files (editor and Git configuration omitted):
 
 ```text
 Football-Player-Value-Prediction/
@@ -230,14 +234,14 @@ Football-Player-Value-Prediction/
 ├── Images/
 │   ├── actual_vs_predicted.png
 │   ├── feature_importance.png
-│   ├── football-intelligence-banner.svg   # New documentation asset
+│   ├── football-intelligence-banner.svg
 │   └── residual_plot.png
 ├── LICENSE
 ├── README.md
 └── requirements.txt
 ```
 
-**Required local input:** place `footballData.csv` beside the root notebook. It is not a tracked project file. The repository has no `data/`, `notebooks/`, `src/`, saved model, or deployment files. Include the new SVG when publishing this README.
+**Required local input:** place `footballData.csv` beside the root notebook. It is not a tracked project file. The repository has no `data/`, `notebooks/`, `src/`, saved model, or deployment files.
 
 ## 13 Installation and Reproduction
 
